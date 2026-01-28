@@ -72,6 +72,10 @@
 
 /* Base CSS (already provided for you).*/
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   margin: 0;
@@ -86,12 +90,65 @@ body {
   --muted: #6b7280;        /* muted text */
   --bg: #f6f7fb;           /* page background */
   --card: #ffffff;         /* card/background surfaces */
+  --brand: #2563eb;
+  --brand-darks: #1d4ed8;
 }
 
 .site-header,
 .site-footer {
   text-align: center;
   padding: 1.25rem;
+  background-color: var(--card); 
+}
+
+.tagline {
+  color: var(--muted);
+}
+
+.color-demo .color-note {
+  font-weight: bold;
+  color: var(--brand);
+}
+
+.color-demo .muted{
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.bg-sample {
+  width: 100%;
+  min-height: 80px;
+  padding: 0.75rem;
+  margin-block: 0.75rem;
+  border-radius: 12px;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--brand),
+    #22c55e
+  );
+}
+
+.inline-label {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.inline-label.alt {
+  border-style: dashed;
+}
+
+.copy .title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.copy .intro {
+  font-style: italic;
+  line-height: 1.65;
+  margin-top: 0.25rem;
 }
 
 .container {
@@ -114,8 +171,48 @@ body {
 }
 
 .toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
   padding: 0.5rem;
   border: 1px dashed rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+  padding: 0.4rem 0.75rem;
+  border: none;
+}
+
+.btn:hover{
+  background-color: #1d4ed8;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.product-grid .item {
+  flex: 1 1 140px;
+  min-height: 90px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 700;
+}
+
+.static-box {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  margin-bottom: 0.5rem;
 }
 
 .position-stage {
