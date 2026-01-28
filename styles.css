@@ -72,7 +72,9 @@
 
 /* Base CSS (already provided for you).*/
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -91,7 +93,7 @@ body {
   --bg: #f6f7fb;           /* page background */
   --card: #ffffff;         /* card/background surfaces */
   --brand: #2563eb;
-  --brand-darks: #1d4ed8;
+  --brand-dark: #1d4ed8;
 }
 
 .site-header,
